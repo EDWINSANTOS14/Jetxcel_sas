@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JETXCEL S.A.S</title>
+    <link rel="icon" href="pixelcut-export (2).png" style="border-radius: 50%;" type="image/png">
+    <link rel="stylesheet" href="estilo.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin=""> -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="wsp.css">
+    <!--Icon-Font-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="https://api.whatsapp.com/send?phone=573115310226&text=Hola%20Santos" class="btn-wsp"id="btnWsp" target="_blank">
+	    <i class="fa fa-whatsapp icono"></i>
+	</a>
+    <script>
+        // Esperar 10 segundos antes de mostrar el botón
+        setTimeout(function() {
+            document.getElementById('btnWsp').classList.add('show');
+        }, 5000); // 10 segundos = 10000 milisegundos
+    </script>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a  href="#">
+                    <h1 class="nav_titulo">JETXCEL S.A.S</h1>
+                    
+                </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="nosotros.html" onclick="seleccionar()">NOSOTROS</a></li>
+                    <li><a href="servicios.html" onclick="seleccionar()">SERVICIOS</a></li>
+                    <!-- <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li> -->
+                    <li><a href="contacto.html" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+<!-- SECCION INICIO -->
+<section id="inicio" class="inicio">
+    <div class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <h2>DESARROLLO DE SOFTWARE</h2>
+                <hr>
+                <p>Diseño Gráfico</p>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <h2>MARKETING DIGITAL</h2>
+                <hr>
+                <p>Diseño Gráfico</p>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <h2>AUTOMATIZACIÓN DE PROYECTOS</h2>
+                <hr>
+                <p>Diseño Gráfico</p>
+            </div>
+        </div>
+        <!-- Navigation dots -->
+        <div class="navigation-dots">
+            <div class="dot" onclick="currentSlide(1)"></div>
+            <div class="dot" onclick="currentSlide(2)"></div>
+            <div class="dot" onclick="currentSlide(3)"></div>
+        </div>
+    </div>
+
+    
+</section>
+
+<script>
+let slideIndex = 0;
+let slideInterval;
+showSlides();
+
+function showSlides() {
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; // Ocultar todas las diapositivas
+    }
+    
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(' active', '');
+    }
+    
+    slides[slideIndex - 1].style.display = "flex"; // Mostrar la diapositiva actual
+    slides[slideIndex - 1].classList.add('zoom-animation');
+    dots[slideIndex - 1].className += " active";
+    
+    clearTimeout(slideInterval);
+    slideInterval = setTimeout(showSlides, 7000); // Cambiar la diapositiva cada 7 segundos
+}
+
+function currentSlide(n) {
+    slideIndex = n - 1; // Ajustar el índice para que coincida con la diapositiva correcta
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; // Ocultar todas las diapositivas
+    }
+    
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(' active', '');
+    }
+    
+    slides[slideIndex].style.display = "flex"; // Mostrar la diapositiva actual
+    slides[slideIndex].classList.add('slide-in-animation');
+    dots[slideIndex].className += " active";
+    
+    clearTimeout(slideInterval);
+    slideInterval = setTimeout(showSlides, 7000); // Reiniciar el temporizador de las diapositivas
+}
+
+
+</script>
+
+<!-- SECCION SOBRE MI -->
+<section id="sobremi" class="sobremi">
+    <div class="contenido-seccion">
+        <h2>Jetxcel Desarrollo De Software</h2>
+        <p>Jetxcel es una empresa líder en <span style="color: #FDD01C;">desarrollo de software en Tame, Arauca,</span> dedicada a la innovación tecnológica local. Nos enfocamos en crear soluciones digitales que impulsan el crecimiento y la eficiencia empresarial, contribuyendo al desarrollo económico y tecnológico de la región mediante aplicaciones y plataformas adaptadas a las necesidades.</p>
+
+        <div class="fila">
+            <div style="margin: auto;" class="col">
+                <div class="contenedor-intereses">
+                    <div class="interes">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <p class="descripcion">+ de 2 años de<br> experiencia</p>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-gears"></i>
+                        <p class="descripcion">+ de 20 proyectos<br> ejecutados</p>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-mug-saucer"></i>
+                        <p class="descripcion">+ de 1000 tazas<br> de cafe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const interests = document.querySelectorAll('.interes');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        interests.forEach(interest => {
+            observer.observe(interest);
+        });
+    });
+    </script>
+
+    <!-- SECCION SOBRE MI -->
+    <!-- <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2 style="padding: 30px;">Nosotros</h2>
+            
+
+            <div class="fila"> -->
+                <!-- datos personales -->
+                <!-- <div class="col">
+                    
+                    <p style="font-size: 18px; margin-top: 100px;">Somos una empresa líder en el <span style="color: #FDD01C;"> desarrollo de software,</span> dedicada a ofrecer soluciones tecnológicas innovadoras y personalizadas. Nuestro equipo de expertos altamente capacitados en programación, diseño de interfaces y gestión de proyectos, se enfoca en brindar a nuestros clientes las herramientas necesarias para optimizar sus procesos y alcanzar el éxito en el entorno digital.</p>
+                </div> -->
+
+                <!-- intereses -->
+                <!-- <div class="col">
+                    
+                    <div class="contenedor-intereses">
+                        <img style="width: 500px; border-radius: 10px; box-shadow: 0 0 10px 0 #FDD01C;  margin-left: 30px; " src="Imagen-de-WhatsApp-2023-08-30-a-las-15.04.28.jpg" alt="">
+                        
+                    </div>
+                </div>
+            </div>
+           
+        </div> -->
+    <!-- </section> -->
+
+   
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            
+            <div class="fila">
+                <div class="col izquierda">
+                    
+                    <div class="item izq">
+                        <img style="border-radius: 10px; box-shadow: 0 0 5px 0 #b3b1b1;" src="Imagen-de-WhatsApp-2023-08-30-a-las-15.04.29.jpg" alt="">
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Capacitando a la futura generación</h4>
+                        
+                        <p> Nos dedicamos a proporcionar educación, formación y recursos para empoderar a los jóvenes y prepararlos para enfrentar los desafíos y oportunidades del futuro.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <img style="border-radius: 10px; box-shadow: 0 0 5px 0 #b3b1b1;" src="Imagen-de-WhatsApp-2023-08-30-a-las-15.04.25.jpg" alt="">
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                   
+                    <div class="item der">
+                        <h4>Impulsando el potencial de los jóvenes mediante la innovación Tecnológica</h4>
+                        
+                        <p>En calidad de empresa líder, somos un equipo altamente capacitado de jóvenes profesionales dedicados a ofrecer soluciones digitales de excelencia. Desde el desarrollo de páginas web modernas y funcionales hasta estrategias de marketing digital efectivas, aplicaciones móviles personalizadas y soluciones de software innovadoras, nos enorgullece brindar a nuestros clientes un enfoque integral y innovador</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                       
+                        <img style="border-radius: 10px; box-shadow: 0 0 5px 0 #b3b1b1;" src="Imagen-de-WhatsApp-2023-09-27-a-las-10.17.59.jpg" alt="">
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>En el camino de la innovación</h4>
+                        
+                        <p>Como navegantes del futuro, nos impulsa la visión de un mundo transformado por nuestras acciones. Nos esforzamos por construir un futuro en el que la tecnología y la innovación generen un impacto positivo en la sociedad y en los negocios.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <!-- <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/p1.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p2.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p3.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p4.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p5.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p6.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+     <!-- SECCION PORTFOLIO -->
+    
+    <!-- SECCION CONTACTO -->
+    
+    <!-- <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img style="border-radius: 50%; width: 250px;" src="pixelcut-export (2).jpeg" alt="">
+                    <p style="margin-top: 5px; font-size: 22px; text-align: center;">Conozca más de nosotros</p>
+                    <hr class="separator">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <style>
+    .map-container {
+    position: relative;
+    width: calc(100% - 20px); /* Ajusta el ancho restando 40px para márgenes laterales */
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px auto; /* Centramos el contenedor con márgenes automáticos */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (min-width: 768px) {
+    .map-container {
+        width: 550px; /* Ancho fijo para pantallas más grandes */
+        height: 485px; /* Altura fija para pantallas más grandes */
+        padding-bottom: 0;
+        margin: 0 auto;
+    }
+}
+.p_copyright{
+    font-size: 20px; /* Tamaño de letra por defecto para escritorio */
+
+}
+.footer_info {
+    font-size: 20px; /* Tamaño de letra por defecto para escritorio */
+}
+
+.redes a i {
+    font-size: 24px; /* Tamaño de los iconos por defecto */
+}
+hr{
+    width: 70%;
+    margin: auto; 
+    margin-bottom: 10px;
+}
+.nav_titulo{
+    font-size: 40px; 
+    color: #FDD01C;
+}
+
+
+@media (max-width: 767px) {
+    .footer_info  {
+        font-size: 15px; /* Tamaño de letra reducido para dispositivos móviles */
+    }
+    .p_copyright{
+    font-size: 15px; /* Tamaño de letra por defecto para escritorio */
+
+}
+
+    .redes a i {
+        font-size: 20px; /* Tamaño de los iconos reducido para dispositivos móviles */
+    }
+
+    hr {
+        width: 90%; /* Ajusta el ancho del hr para dispositivos móviles */
+        margin: auto; 
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        font-size: 14px; /* Ajusta el tamaño de letra del párrafo del copyright */
+    }
+    .nav_titulo{
+    font-size: 30px; 
+    color: #FDD01C;
+}
+
+}
+
+
+    </style>
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        
+        <div class="contact-info">
+            <div class="redes">
+                <a href="https://www.facebook.com/people/Jetxcel-SAS/100093263952966/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/jetxcel_sas/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                
+            </div>
+            <hr>
+            <p class="footer_info">Tame-Arauca</p>
+            <p class="footer_info"><strong>Celular y whatsapp:</strong> 314 359 4424 - xxx xxx xxxx</p>
+            <p class="footer_info"><strong>Correo electrónico:</strong> atencionalcliente@jetxcel.com</p>
+            <br>
+            <p class="p_copyright">©2024 Jetxcel S.A.S.</p>
+            
+        </div>
+       
+    </footer>
+    
+
+    <script src="script.js"></script>
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Servicios Jetxcel s.a.s</title>
+    <link rel="icon" href="pixelcut-export (2).png" style="border-radius: 50%;" type="image/png">
+    <link rel="stylesheet" href="estilo.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin=""> -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="wsp.css">
+    <!--Icon-Font-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="https://api.whatsapp.com/send?phone=573115310226&text=Hola%20Santos" class="btn-wsp"id="btnWsp" target="_blank">
+	    <i class="fa fa-whatsapp icono"></i>
+	</a>
+    <script>
+        // Esperar 10 segundos antes de mostrar el botón
+        setTimeout(function() {
+            document.getElementById('btnWsp').classList.add('show');
+        }, 5000); // 10 segundos = 10000 milisegundos
+    </script>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a  href="#">
+                    <h1 class="nav_titulo">JETXCEL S.A.S</h1>
+                    
+                </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="index.html#sobremi" onclick="seleccionar()">NOSOTROS</a></li>
+                    <li><a href="servicios.html" onclick="seleccionar()">SERVICIOS</a></li>
+                    <!-- <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li> -->
+                    <li><a href="contacto.html" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+<!-- SECCION INICIO -->
+
+<!-- SECCION SOBRE MI -->
+
+
+
+
+
+    <!-- SECCION SOBRE MI -->
+    <!-- <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2 style="padding: 30px;">Nosotros</h2>
+            
+
+            <div class="fila"> -->
+                <!-- datos personales -->
+                <!-- <div class="col">
+                    
+                    <p style="font-size: 18px; margin-top: 100px;">Somos una empresa líder en el <span style="color: #FDD01C;"> desarrollo de software,</span> dedicada a ofrecer soluciones tecnológicas innovadoras y personalizadas. Nuestro equipo de expertos altamente capacitados en programación, diseño de interfaces y gestión de proyectos, se enfoca en brindar a nuestros clientes las herramientas necesarias para optimizar sus procesos y alcanzar el éxito en el entorno digital.</p>
+                </div> -->
+
+                <!-- intereses -->
+                <!-- <div class="col">
+                    
+                    <div class="contenedor-intereses">
+                        <img style="width: 500px; border-radius: 10px; box-shadow: 0 0 10px 0 #FDD01C;  margin-left: 30px; " src="Imagen-de-WhatsApp-2023-08-30-a-las-15.04.28.jpg" alt="">
+                        
+                    </div>
+                </div>
+            </div>
+           
+        </div> -->
+    <!-- </section> -->
+
+   
+
+    <!-- SECCION CURRICULUM -->
+    <!-- <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Arte y Multimedia</h4>
+                        <span class="casa">Universidad de Oxford</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Arte y Multimedia</h4>
+                        <span class="casa">Universidad de Oxford</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Arte y Multimedia</h4>
+                        <span class="casa">Universidad de Oxford</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Front Developer</h4>
+                        <span class="casa">Nombre de Compañía</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Front Developer</h4>
+                        <span class="casa">Nombre de Compañía</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Front Developer</h4>
+                        <span class="casa">Nombre de Compañía</span>
+                        <span class="fecha">2005 - 2008</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2 style="letter-spacing: 3px;">SERVICIOS JETXCEL SAS</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/p1.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p2.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p3.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img style="height: 255px;" src="para-qué-sirve-la-ofimática.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Cursos de ofimatica</h3>
+                        <p>Jetxcel s.a.s</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p5.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Desarrollo web</h3>
+                        <p>Jetxcel s.a.s</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/p6.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- SECCION PORTFOLIO -->
+    
+
+    <!-- <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img style="border-radius: 50%; width: 250px;" src="pixelcut-export (2).jpeg" alt="">
+                    <p style="margin-top: 5px; font-size: 22px; text-align: center;">Conozca más de nosotros</p>
+                    <hr class="separator">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <style>
+    .map-container {
+    position: relative;
+    width: calc(100% - 20px); /* Ajusta el ancho restando 40px para márgenes laterales */
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px auto; /* Centramos el contenedor con márgenes automáticos */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (min-width: 768px) {
+    .map-container {
+        width: 550px; /* Ancho fijo para pantallas más grandes */
+        height: 485px; /* Altura fija para pantallas más grandes */
+        padding-bottom: 0;
+        margin: 0 auto;
+    }
+}
+.p_copyright{
+    font-size: 20px; /* Tamaño de letra por defecto para escritorio */
+
+}
+.footer_info {
+    font-size: 20px; /* Tamaño de letra por defecto para escritorio */
+}
+
+.redes a i {
+    font-size: 24px; /* Tamaño de los iconos por defecto */
+}
+hr{
+    width: 70%;
+    margin: auto; 
+    margin-bottom: 10px;
+}
+.nav_titulo{
+    font-size: 40px; 
+    color: #FDD01C;
+}
+
+
+@media (max-width: 767px) {
+    .footer_info  {
+        font-size: 15px; /* Tamaño de letra reducido para dispositivos móviles */
+    }
+    .p_copyright{
+    font-size: 15px; /* Tamaño de letra por defecto para escritorio */
+
+}
+
+    .redes a i {
+        font-size: 20px; /* Tamaño de los iconos reducido para dispositivos móviles */
+    }
+
+    hr {
+        width: 90%; /* Ajusta el ancho del hr para dispositivos móviles */
+        margin: auto; 
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        font-size: 14px; /* Ajusta el tamaño de letra del párrafo del copyright */
+    }
+    .nav_titulo{
+    font-size: 30px; 
+    color: #FDD01C;
+}
+
+}
+
+
+    </style>
+    <footer style="background-color: #1e2326;">
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        
+        <div class="contact-info">
+            <div class="redes">
+                <a href="https://www.facebook.com/people/Jetxcel-SAS/100093263952966/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/jetxcel_sas/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                
+            </div>
+            <hr>
+            <p class="footer_info">Tame-Arauca</p>
+            <p class="footer_info"><strong>Celular y whatsapp:</strong> 314 359 4424 - xxx xxx xxxx</p>
+            <p class="footer_info"><strong>Correo electrónico:</strong> atencionalcliente@jetxcel.com</p>
+            <br>
+            <p class="p_copyright">©2024 Jetxcel S.A.S.</p>
+            
+        </div>
+       
+    </footer>
+    
+
+    <script src="script.js"></script>
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+</body>
+</html>
